@@ -1,6 +1,5 @@
 /*
- * Copyright (c) 2026 Jakie Wang (CEDEC, Microelectronic System Engineering)
- * Supervisor: Assoc. Prof. Dr. Jagadheswaran
+ * Copyright (c) 2026 Jakie Wang (CEDEC V1)
  * SPDX-License-Identifier: Apache-2.0
  */
 

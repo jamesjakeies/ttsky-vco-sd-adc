@@ -1,7 +1,7 @@
 # Tiny Tapeout project information
 project:
   title:        "CEDEC V1: 1.8V VCO-Based Sigma-Delta ADC"
-  author:       "Jakie Wang (Supervisor: Assoc. Prof. Dr. Jagadheswaran)"
+  author:       "Jakie Wang"
   discord:      ""
   description:  "Mixed-signal 1.8V VCO-based Sigma-Delta ADC with 7-stage ring VCO, 1-bit quantizer, and 763-cell Sinc3 decimator (SKY130A)."
   language:     "Analog"
