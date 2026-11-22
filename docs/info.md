@@ -10,8 +10,9 @@ sections.
 - **Author**: Jakie Wang
 - **Analog Front-End (`vco_frontend`)**: Differential voltage-to-current OTA + 5-stage current-starved ring VCO + phase-frequency quantizer (`26.4 µW` analog power at `1.8 V`, LVS-clean & 0 SKY130A DRC violations).
 - **Digital Back-End (`vco_sd_digital`)**: 763-cell `sky130_fd_sc_hd` Sinc³ decimation filter with selectable OSR (`ui_in[1:0]`), MSB/LSB byte-mux (`ui_in[2]`), and `data_valid` strobe (`uio_out[0]`).
+- **On-Chip MOS Supply Decoupling Bank (`vco_sd_mos_decap_bank`)**: 30-row `sky130_fd_sc_hd__decap_8/4` supply decoupling array strapped to dual `VDPWR`/`VGND` `MET4` rails to isolate analog supply noise and achieve full `1×2` tile density.
 - **Pre-Layout vs Post-Layout PEX (`OSR = 64`, `fs = 6 MHz`)**: `SNDR = 49.59 dB` (`7.94 ENOB`) Pre-Layout vs `49.09 dB` (`7.86 ENOB`) Post-Layout PEX.
-- **Top-Metal (`MET4`) Silicon Inscription**: `Jakie Wang CEDEC V1`.
+- **Top-Metal (`MET4`) Silicon Inscription**: Etched on `MET4` over the upper decoupling bank (`0` Magic & KLayout DRC).
 
 ## How to test
 

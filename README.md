@@ -16,7 +16,8 @@
 
 - **Analog Front-End (`vco_frontend`)**: Differential voltage-to-current OTA + 5-stage current-starved ring VCO + phase-frequency quantizer (`26.4 µW` analog power at `1.8 V`, LVS-clean & 0 DRC).
 - **Digital Back-End (`vco_sd_digital`)**: 763-cell `sky130_fd_sc_hd` Sinc³ decimation filter with programmable OSR (`ui_in[1:0]`), output byte multiplexer (`ui_in[2]`), and `data_valid` strobe (`uio_out[0]`).
-- **Top-Metal (`MET4`) Silicon Inscription**: `Jakie Wang CEDEC V1`.
+- **On-Chip MOS Supply Decoupling Bank (`vco_sd_mos_decap_bank`)**: 30-row high-density `sky130_fd_sc_hd__decap_8/4` decoupling array strapped to dual `VDPWR`/`VGND` `MET4` rails to suppress digital switching ripple and maximize area utilization across the `1×2` tile.
+- **Top-Metal (`MET4`) Silicon Inscription**: Etched directly on `MET4` above the upper decoupling bank (0 Magic & KLayout DRC).
 
 ## Verified Performance (SKY130A BSIM4, `fs = 6 MHz`, `OSR = 64`)
 
